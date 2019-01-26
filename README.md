@@ -19,11 +19,8 @@ import useTypingEffect from 'use-typing-effect'
 
 const Example = () => {
   const heading = useTypingEffect([
-    'Typing effect...',
-    'React hook for the “human typing” effect.',
-    'Best react hook!',
-    'Star on github!',
-    'Use in production!',
+    'Some text here',
+    'More text here'
   ])
   return (
     <h1>{heading}</h1>
