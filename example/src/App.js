@@ -1,13 +1,21 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-import ExampleComponent from 'use-typing-effect'
+import { useTypingEffect } from 'use-typing-effect'
 
-export default class App extends Component {
-  render () {
-    return (
-      <div>
-        <ExampleComponent text='Modern React component module' />
-      </div>
-    )
-  }
+const App = () => {
+  const heading = useTypingEffect([
+    'Typing effect...',
+    'React hook for typing effect.',
+    'Best react hook!'
+  ])
+
+  return (
+    <div>
+      <h1>
+        {heading}
+      </h1>
+    </div>
+  )
 }
+
+export default App
