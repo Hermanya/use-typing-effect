@@ -15,14 +15,19 @@ npm install --save use-typing-effect
 ```tsx
 import * as React from 'react'
 
-import MyComponent from 'use-typing-effect'
+import useTypingEffect from 'use-typing-effect'
 
-class Example extends React.Component {
-  render () {
-    return (
-      <MyComponent />
-    )
-  }
+const Example = () => {
+  const heading = useTypingEffect([
+    'Typing effect...',
+    'React hook for the “human typing” effect.',
+    'Best react hook!',
+    'Star on github!',
+    'Use in production!',
+  ])
+  return (
+    <h1>{heading}</h1>
+  )
 }
 ```
 
