@@ -5,6 +5,7 @@
   "author": "Hermanya",
   "license": "MIT",
   "repository": "Hermanya/use-typing-effect",
+  "homepage": "https://Hermanya.github.io/use-typing-effect",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
@@ -24,11 +25,10 @@
   "dependencies": {},
   "peerDependencies": {
     "prop-types": "^15.5.4",
-    "react": "^16.8.0-alpha.1",
-    "react-dom": "^16.8.0-alpha.1"
+    "react": "16.8.0-alpha.1",
+    "react-dom": "16.8.0-alpha.1"
   },
   "devDependencies": {
-    "@svgr/rollup": "^4.1.0",
     "@types/jest": "^23.3.13",
     "@types/react": "^16.7.20",
     "@types/react-dom": "^16.0.11",
@@ -36,15 +36,14 @@
     "babel-runtime": "^6.26.0",
     "cross-env": "^5.2.0",
     "gh-pages": "^2.0.1",
-    "react": "^16.8.0-alpha.1",
-    "react-dom": "^16.8.0-alpha.1",
+    "react": "16.8.0-alpha.1",
+    "react-dom": "16.8.0-alpha.1",
     "react-scripts-ts": "^3.1.0",
     "rollup": "^1.1.2",
     "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-commonjs": "^9.2.0",
     "rollup-plugin-node-resolve": "^4.0.0",
     "rollup-plugin-peer-deps-external": "^2.2.0",
-    "rollup-plugin-postcss": "^2.0.1",
     "rollup-plugin-typescript2": "^0.19.2",
     "rollup-plugin-url": "^2.1.0",
     "typescript": "^3.2.4"

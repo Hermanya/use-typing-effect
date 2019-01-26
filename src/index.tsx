@@ -1,6 +1,8 @@
 import * as React from 'react';
 
-export const useTypingEffect = (strings: string[]) => {
+export const useTypingEffect = (
+  strings: string[],
+) => {
   let [{
     stringIndex,
     characterIndex
@@ -12,14 +14,20 @@ export const useTypingEffect = (strings: string[]) => {
     characterIndex: 0,
   });
 
-  const handle = () => {
+  let timeoutId: number;
+  const emulateKeyStroke = () => {
     characterIndex++;
     if (characterIndex === strings[stringIndex].length) {
       characterIndex = 0;
       stringIndex++;
-      if (stringIndex == strings.length) {
+      if (stringIndex === strings.length) {
         stringIndex = 0;
       }
+      timeoutId = window.setTimeout(emulateKeyStroke, 100)
+    } else if (characterIndex === strings[stringIndex].length - 1) {
+      timeoutId = window.setTimeout(emulateKeyStroke, 2000)
+    } else {
+      timeoutId = window.setTimeout(emulateKeyStroke, 100)
     }
     setState({
       characterIndex,
@@ -28,12 +36,14 @@ export const useTypingEffect = (strings: string[]) => {
   };
 
   React.useEffect(() => {
-    const id = window.setInterval(handle, 300);
+    emulateKeyStroke();
     return () => {
-      window.clearInterval(id);
+      window.clearInterval(timeoutId);
     };
   }, []);
 
-  return strings[stringIndex]
-    .slice(0, characterIndex);
+  const nonBreakingSpace = '\u00A0'
+  return (strings[stringIndex]
+  .slice(0, characterIndex + 1) || nonBreakingSpace);
 };
+export default useTypingEffect;
