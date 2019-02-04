@@ -35,3 +35,8 @@ const Example = () => {
 ## License
 
 MIT © [Hermanya](https://github.com/Hermanya)
+
+---
+
+This hook is created using [create-react-hook](https://github.com/hermanya/create-react-hook).
+
