@@ -24,16 +24,17 @@
   },
   "dependencies": {},
   "peerDependencies": {
-    "react": "16.8.0-alpha.1"
+    "react": "16.8.3"
   },
   "devDependencies": {
     "@types/jest": "^23.3.13",
     "@types/react": "^16.7.20",
+    "@typescript-eslint/parser": "^1.4.2",
     "babel-core": "^6.26.3",
     "babel-runtime": "^6.26.0",
     "cross-env": "^5.2.0",
     "gh-pages": "^2.0.1",
-    "react": "16.8.0-alpha.1",
+    "react": "16.8.3",
     "react-scripts-ts": "^3.1.0",
     "rollup": "^1.1.2",
     "rollup-plugin-babel": "^4.3.2",
@@ -42,9 +43,32 @@
     "rollup-plugin-peer-deps-external": "^2.2.0",
     "rollup-plugin-typescript2": "^0.19.2",
     "rollup-plugin-url": "^2.1.0",
-    "typescript": "^3.2.4"
+    "typescript": "^3.3.3333"
   },
   "files": [
     "dist"
+  ],
+  "eslintConfig": {
+    "extends": "react-app",
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "useJSXTextNode": true,
+      "project": "./tsconfig.json"
+    },
+    "plugins": [
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": "error"
+    }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
   ]
 }

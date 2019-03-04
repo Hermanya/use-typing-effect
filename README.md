@@ -17,19 +17,16 @@ npm install --save use-typing-effect
 ## Usage
 
 ```tsx
-import * as React from 'react'
+import * as React from 'react';
 
-import useTypingEffect from 'use-typing-effect'
+import useTypingEffect from 'use-typing-effect';
 
 const Example = () => {
-  const heading = useTypingEffect([
-    'Some text here',
-    'More text here'
-  ])
-  return (
-    <h1>{heading}</h1>
-  )
-}
+  const heading = useTypingEffect(['Some text here', 'More text here'], {
+    loop: true
+  });
+  return <h1>{heading}</h1>;
+};
 ```
 
 ## License
